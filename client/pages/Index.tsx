@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-yellow-primary font-barlow flex flex-col max-w-md mx-auto relative"
+    <div className="min-h-screen bg-yellow-primary font-barlow flex flex-col w-full max-w-md mx-auto relative">
       {/* Header Section */}
       <div className="flex-1 px-5 pt-5 pb-0">
         {/* Back Button */}
