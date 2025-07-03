@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Design-specific colors
+        yellow: {
+          primary: "#FFD370",
+          secondary: "#FED371",
+        },
+        brown: {
+          primary: "#5F4A46",
+          secondary: "#805E57",
+          tertiary: "#9C8A87",
+          light: "#C7B2AE",
+        },
+        cream: "#FAF5EF",
+        coral: "#F65A3B",
       },
       borderRadius: {
         lg: "var(--radius)",
