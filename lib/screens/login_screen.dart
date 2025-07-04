@@ -43,7 +43,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       width: 291,
                       child: Text(
-                        'Hello! hololplplo A safe and fun space for every child\'s development.',
+                        'Hello! hololplSVFSDG  fffff A safe and fun space for every child\'s development.',
                         style: GoogleFonts.barlowSemiCondensed(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
