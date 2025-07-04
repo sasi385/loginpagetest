@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
                     // Back Button
                     const BackButtonWidget(),
                     const SizedBox(height: 32),
-                    
+
                     // Title
                     Text(
                       'Log in',
@@ -38,12 +38,12 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    
+
                     // Subtitle
                     SizedBox(
                       width: 291,
                       child: Text(
-                        'Hello! A safe and fun space for every child\'s development.',
+                        'Hello! hololplplo A safe and fun space for every child\'s development.',
                         style: GoogleFonts.barlowSemiCondensed(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
@@ -57,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
             ),
-            
+
             // Login Form Card
             Expanded(
               flex: 4,
@@ -106,7 +106,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      
+
                       // Password Input
                       Container(
                         width: double.infinity,
@@ -132,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      
+
                       // Forgot Password Link
                       Align(
                         alignment: Alignment.centerRight,
@@ -150,7 +150,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      
+
                       // Login Button
                       SizedBox(
                         width: double.infinity,
@@ -176,7 +176,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 32),
-                      
+
                       // Divider with "or"
                       Row(
                         children: [
@@ -206,7 +206,7 @@ class LoginScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 32),
-                      
+
                       // Social Login Buttons
                       Column(
                         children: [
