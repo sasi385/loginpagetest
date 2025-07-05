@@ -18,7 +18,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "flutter_lints",
       "version": "3.0.2",
       "dependencies": [
@@ -26,8 +25,6 @@
       ]
     },
     {
-=======
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "flutter_test",
       "version": "0.0.0",
       "dependencies": [
@@ -56,7 +53,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "flutter_svg",
       "version": "2.2.0",
       "dependencies": [
@@ -83,8 +79,6 @@
       "dependencies": []
     },
     {
-=======
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "flutter",
       "version": "0.0.0",
       "dependencies": [
@@ -97,42 +91,16 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "lints",
       "version": "3.0.0",
       "dependencies": []
     },
     {
-=======
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "vm_service",
       "version": "15.0.0",
       "dependencies": []
     },
     {
-<<<<<<< HEAD
-=======
-      "name": "vector_math",
-      "version": "2.1.4",
-      "dependencies": []
-    },
-    {
-      "name": "test_api",
-      "version": "0.7.4",
-      "dependencies": [
-        "async",
-        "boolean_selector",
-        "collection",
-        "meta",
-        "source_span",
-        "stack_trace",
-        "stream_channel",
-        "string_scanner",
-        "term_glyph"
-      ]
-    },
-    {
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "term_glyph",
       "version": "1.2.2",
       "dependencies": []
@@ -152,16 +120,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-=======
-      "name": "stack_trace",
-      "version": "1.12.1",
-      "dependencies": [
-        "path"
-      ]
-    },
-    {
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "source_span",
       "version": "1.10.1",
       "dependencies": [
@@ -171,14 +129,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-=======
-      "name": "path",
-      "version": "1.9.1",
-      "dependencies": []
-    },
-    {
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "meta",
       "version": "1.16.0",
       "dependencies": []
@@ -191,20 +141,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-=======
-      "name": "matcher",
-      "version": "0.12.17",
-      "dependencies": [
-        "async",
-        "meta",
-        "stack_trace",
-        "term_glyph",
-        "test_api"
-      ]
-    },
-    {
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "leak_tracker_testing",
       "version": "3.0.1",
       "dependencies": [
@@ -214,20 +150,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-=======
-      "name": "leak_tracker_flutter_testing",
-      "version": "3.0.9",
-      "dependencies": [
-        "flutter",
-        "leak_tracker",
-        "leak_tracker_testing",
-        "matcher",
-        "meta"
-      ]
-    },
-    {
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "leak_tracker",
       "version": "10.0.9",
       "dependencies": [
@@ -239,30 +161,11 @@
       ]
     },
     {
-<<<<<<< HEAD
-=======
-      "name": "fake_async",
-      "version": "1.3.3",
-      "dependencies": [
-        "clock",
-        "collection"
-      ]
-    },
-    {
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "collection",
       "version": "1.19.1",
       "dependencies": []
     },
     {
-<<<<<<< HEAD
-=======
-      "name": "clock",
-      "version": "1.1.2",
-      "dependencies": []
-    },
-    {
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "characters",
       "version": "1.4.0",
       "dependencies": []
@@ -284,7 +187,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "leak_tracker_flutter_testing",
       "version": "3.0.9",
       "dependencies": [
@@ -375,51 +277,6 @@
         "flutter",
         "http",
         "vector_graphics_codec"
-=======
-      "name": "sky_engine",
-      "version": "0.0.0",
-      "dependencies": []
-    },
-    {
-      "name": "cupertino_icons",
-      "version": "1.0.8",
-      "dependencies": []
-    },
-    {
-      "name": "flutter_lints",
-      "version": "3.0.2",
-      "dependencies": [
-        "lints"
-      ]
-    },
-    {
-      "name": "lints",
-      "version": "3.0.0",
-      "dependencies": []
-    },
-    {
-      "name": "google_fonts",
-      "version": "6.2.1",
-      "dependencies": [
-        "crypto",
-        "flutter",
-        "http",
-        "path_provider"
-      ]
-    },
-    {
-      "name": "crypto",
-      "version": "3.0.6",
-      "dependencies": [
-        "typed_data"
-      ]
-    },
-    {
-      "name": "typed_data",
-      "version": "1.4.0",
-      "dependencies": [
-        "collection"
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       ]
     },
     {
@@ -433,7 +290,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "crypto",
       "version": "3.0.6",
       "dependencies": [
@@ -480,8 +336,6 @@
       "dependencies": []
     },
     {
-=======
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "web",
       "version": "1.1.1",
       "dependencies": []
@@ -497,100 +351,10 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "typed_data",
       "version": "1.4.0",
       "dependencies": [
         "collection"
-=======
-      "name": "flutter_svg",
-      "version": "2.2.0",
-      "dependencies": [
-        "flutter",
-        "http",
-        "vector_graphics",
-        "vector_graphics_codec",
-        "vector_graphics_compiler"
-      ]
-    },
-    {
-      "name": "vector_graphics_codec",
-      "version": "1.1.13",
-      "dependencies": []
-    },
-    {
-      "name": "vector_graphics_compiler",
-      "version": "1.1.17",
-      "dependencies": [
-        "args",
-        "meta",
-        "path",
-        "path_parsing",
-        "vector_graphics_codec",
-        "xml"
-      ]
-    },
-    {
-      "name": "path_parsing",
-      "version": "1.1.0",
-      "dependencies": [
-        "meta",
-        "vector_math"
-      ]
-    },
-    {
-      "name": "xml",
-      "version": "6.5.0",
-      "dependencies": [
-        "collection",
-        "meta",
-        "petitparser"
-      ]
-    },
-    {
-      "name": "petitparser",
-      "version": "6.1.0",
-      "dependencies": [
-        "collection",
-        "meta"
-      ]
-    },
-    {
-      "name": "vector_graphics",
-      "version": "1.1.19",
-      "dependencies": [
-        "flutter",
-        "http",
-        "vector_graphics_codec"
-      ]
-    },
-    {
-      "name": "args",
-      "version": "2.7.0",
-      "dependencies": []
-    },
-    {
-      "name": "path_provider",
-      "version": "2.1.5",
-      "dependencies": [
-        "flutter",
-        "path_provider_android",
-        "path_provider_foundation",
-        "path_provider_linux",
-        "path_provider_platform_interface",
-        "path_provider_windows"
-      ]
-    },
-    {
-      "name": "path_provider_linux",
-      "version": "2.2.1",
-      "dependencies": [
-        "ffi",
-        "flutter",
-        "path",
-        "path_provider_platform_interface",
-        "xdg_directories"
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       ]
     },
     {
@@ -613,7 +377,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "path_provider_linux",
       "version": "2.2.1",
       "dependencies": [
@@ -622,12 +385,6 @@
         "path",
         "path_provider_platform_interface",
         "xdg_directories"
-=======
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
-      "dependencies": [
-        "meta"
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       ]
     },
     {
@@ -639,7 +396,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "name": "path_provider_android",
       "version": "2.2.17",
       "dependencies": [
@@ -656,14 +412,11 @@
       ]
     },
     {
-=======
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "ffi",
       "version": "2.1.4",
       "dependencies": []
     },
     {
-<<<<<<< HEAD
       "name": "plugin_platform_interface",
       "version": "2.1.8",
       "dependencies": [
@@ -671,8 +424,6 @@
       ]
     },
     {
-=======
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
       "name": "platform",
       "version": "3.1.6",
       "dependencies": []
@@ -684,17 +435,6 @@
         "meta",
         "path"
       ]
-<<<<<<< HEAD
-=======
-    },
-    {
-      "name": "path_provider_android",
-      "version": "2.2.17",
-      "dependencies": [
-        "flutter",
-        "path_provider_platform_interface"
-      ]
->>>>>>> d98d26514c6798047a6f166fb30897f928344f50
     }
   ],
   "configVersion": 1
