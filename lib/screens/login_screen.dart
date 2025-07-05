@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
 
                     // Title
                     Text(
-                      'Log iningAinggggggnvofvnfofvnsvifknvuofe',
+                      'Log in',
                       style: GoogleFonts.barlowSemiCondensed(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
