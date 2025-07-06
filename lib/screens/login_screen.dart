@@ -20,42 +20,56 @@ class LoginScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Back Button
-                    const BackButtonWidget(),
-                    const SizedBox(height: 32),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Back Button
+                      const BackButtonWidget(),
+                      const SizedBox(height: 32),
 
-                    // Title
-                    Text(
-                      'Log in',
-                      style: GoogleFonts.barlowSemiCondensed(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        color: AppColors.brownPrimary,
-                        letterSpacing: 2.0,
-                        height: 1.0,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-
-                    // Subtitle
-                    SizedBox(
-                      width: 291,
-                      child: Text(
-                        'Hello! hololplSVFSDG  fffff A safe and fun space for every child\'s development.'
-                        'Hello! hololplSVFSDG  fffff A safe and fun space for every child\'s development.',
+                      // Title
+                      Text(
+                        'ลงชื่อเข้าใช้',
                         style: GoogleFonts.barlowSemiCondensed(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.brownSecondary,
-                          letterSpacing: 0.8,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.brownPrimary,
+                          letterSpacing: 2.0,
                           height: 1.0,
                         ),
                       ),
-                    ),
-                  ],
-                ),
+                      const SizedBox(height: 16),
+
+                      // Subtitle
+                      SizedBox(
+                        width: 291,
+                        child: Column(
+                          crossAxisAlignment:
+                              CrossAxisAlignment.start, // ปรับแนวชิดซ้าย
+                          children: [
+                            Text(
+                              'สวัสดี!! เราคือแอปพลิเคชันเพื่อส่งเสริมพัฒนาการของเด็กออทิสติก\n',
+                              style: GoogleFonts.barlowSemiCondensed(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: AppColors.brownSecondary,
+                                letterSpacing: 0.8,
+                                height: 1.0,
+                              ),
+                            ),
+                            Text(
+                              'โปรดลงทะเบียนเพื่อเป็นการบันทึกข้อมูล',
+                              style: GoogleFonts.barlowSemiCondensed(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: AppColors.brownSecondary,
+                                letterSpacing: 0.8,
+                                height: 1.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ]),
               ),
             ),
 
@@ -95,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Username',
+                              'ชื่อผู้ใช้',
                               style: GoogleFonts.barlowSemiCondensed(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -121,7 +135,7 @@ class LoginScreen extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Password',
+                              'รหัสผ่าน',
                               style: GoogleFonts.barlowSemiCondensed(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -140,7 +154,7 @@ class LoginScreen extends StatelessWidget {
                         child: TextButton(
                           onPressed: () {},
                           child: Text(
-                            'Forget Password?',
+                            'ลืมรหัสผ่าน?',
                             style: GoogleFonts.barlowSemiCondensed(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -155,7 +169,7 @@ class LoginScreen extends StatelessWidget {
                       // Login Button
                       SizedBox(
                         width: double.infinity,
-                        height: 59,
+                        height: 40,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -216,7 +230,7 @@ class LoginScreen extends StatelessWidget {
                             backgroundColor: AppColors.yellowSecondary,
                             iconWidget: Container(
                               width: 38,
-                              height: 38,
+                              height: 25,
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                                 shape: BoxShape.circle,
@@ -235,7 +249,7 @@ class LoginScreen extends StatelessWidget {
                             backgroundColor: AppColors.yellowPrimary,
                             iconWidget: Container(
                               width: 38,
-                              height: 38,
+                              height: 25,
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                                 shape: BoxShape.circle,
