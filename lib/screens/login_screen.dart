@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../widgets/back_button_widget.dart';
-import '../widgets/social_login_button.dart';
-import '../utils/app_colors.dart';
+import '../widgets/backwordbutton-loginpage.dart';
+import '../widgets/SocialLoginButton.dart';
+import '../utils/loginpagecolors.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -149,21 +149,7 @@ class LoginScreen extends StatelessWidget {
                       const SizedBox(height: 12),
 
                       // Forgot Password Link
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'ลืมรหัสผ่าน?',
-                            style: GoogleFonts.barlowSemiCondensed(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.brownLight,
-                              letterSpacing: 0.7,
-                            ),
-                          ),
-                        ),
-                      ),
+
                       const SizedBox(height: 24),
 
                       // Login Button
@@ -182,9 +168,9 @@ class LoginScreen extends StatelessWidget {
                           child: Text(
                             'Log in',
                             style: GoogleFonts.barlowSemiCondensed(
-                              fontSize: 29,
+                              fontSize: 20,
                               fontWeight: FontWeight.w800,
-                              color: AppColors.cream,
+                              color: const Color.fromARGB(255, 255, 255, 255),
                               letterSpacing: 1.45,
                             ),
                           ),
@@ -220,7 +206,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 10),
 
                       // Social Login Buttons
                       Column(
@@ -230,7 +216,7 @@ class LoginScreen extends StatelessWidget {
                             backgroundColor: AppColors.yellowSecondary,
                             iconWidget: Container(
                               width: 38,
-                              height: 25,
+                              height: 20,
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                                 shape: BoxShape.circle,
@@ -243,25 +229,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             onPressed: () {},
                           ),
-                          const SizedBox(height: 16),
-                          SocialLoginButton(
-                            text: 'Continue with Facebook',
-                            backgroundColor: AppColors.yellowPrimary,
-                            iconWidget: Container(
-                              width: 38,
-                              height: 25,
-                              decoration: const BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(
-                                Icons.facebook,
-                                color: Color(0xFF3b5998),
-                                size: 24,
-                              ),
-                            ),
-                            onPressed: () {},
-                          ),
+                          const SizedBox(height: 10),
                         ],
                       ),
                     ],

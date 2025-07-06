@@ -12,7 +12,7 @@ class ChildrenApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Children App',
+      title: 'NON-Autos mine',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.orange,
