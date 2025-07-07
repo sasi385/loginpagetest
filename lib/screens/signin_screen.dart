@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../widgets/backwordbutton-loginpage.dart';
 import '../widgets/SocialLoginButton.dart';
 import 'package:children_app_login/utils/colors.dart';
+import 'ATEC_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -151,7 +152,7 @@ class SignInScreen extends StatelessWidget {
                         decoration: InputDecoration(
                           hintText: 'ยืนยันรหัสผ่าน',
                           hintStyle: GoogleFonts.barlowSemiCondensed(
-                            fontSize: 15,
+                            fontSize: 12,
                             fontWeight: FontWeight.w600,
                             color: AppColors.brownTertiary,
                           ),
@@ -172,7 +173,12 @@ class SignInScreen extends StatelessWidget {
                         height: 45,
                         child: ElevatedButton(
                           onPressed: () {
-                            // TODO: Login logic
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const ATECHomePage(),
+                              ),
+                            );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.brownPrimary,
@@ -182,7 +188,7 @@ class SignInScreen extends StatelessWidget {
                             elevation: 0,
                           ),
                           child: Text(
-                            'เข้าสู่ระบบ',
+                            'ลงชื่อเข้าใช้',
                             style: GoogleFonts.barlowSemiCondensed(
                               fontSize: 20,
                               fontWeight: FontWeight.w800,

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../widgets/backwordbutton-loginpage.dart';
 import '../widgets/SocialLoginButton.dart';
 import 'package:children_app_login/utils/colors.dart';
+import 'start_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -147,7 +148,12 @@ class LoginScreen extends StatelessWidget {
                         height: 45,
                         child: ElevatedButton(
                           onPressed: () {
-                            // TODO: Login logic
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const StartButton(),
+                              ),
+                            );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.brownPrimary,
