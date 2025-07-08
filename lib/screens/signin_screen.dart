@@ -35,14 +35,14 @@ class SignInScreen extends StatelessWidget {
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
                       color: AppColors.brownPrimary,
-                      letterSpacing: 2.0,
+                      letterSpacing: 1.0,
                     ),
                   ),
                   const SizedBox(height: 16),
 
                   // Subtitle
                   Text(
-                    'สวัสดี เราคือแอปพลิเคชันเพื่อส่งเสริมพัฒนาการของเด็กออทิสติก\n',
+                    'สวัสดี\nเราคือแอปพลิเคชันเพื่อส่งเสริมพัฒนาการของเด็กออทิสติก\n',
                     style: GoogleFonts.barlowSemiCondensed(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
@@ -188,12 +188,12 @@ class SignInScreen extends StatelessWidget {
                             elevation: 0,
                           ),
                           child: Text(
-                            'ลงชื่อเข้าใช้',
+                            'SIGN IN',
                             style: GoogleFonts.barlowSemiCondensed(
                               fontSize: 20,
                               fontWeight: FontWeight.w800,
                               color: Colors.white,
-                              letterSpacing: 1.4,
+                              letterSpacing: 1.0,
                             ),
                           ),
                         ),

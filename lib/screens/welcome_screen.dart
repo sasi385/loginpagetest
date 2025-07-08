@@ -54,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
                         style: GoogleFonts.barlowSemiCondensed(
                           fontSize: 45,
                           fontWeight: FontWeight.w800,
-                          letterSpacing: 3,
+                          letterSpacing: 1.0,
                           height: 1.0,
                           color: const Color(0xFF705048), // Brown dark
                         ),
@@ -99,11 +99,11 @@ class WelcomeScreen extends StatelessWidget {
                                 elevation: 0,
                               ),
                               child: Text(
-                                'เข้าสู่ระบบ',
+                                'LOG IN',
                                 style: GoogleFonts.barlowSemiCondensed(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w800,
-                                  letterSpacing: 1.2,
+                                  letterSpacing: 1.0,
                                 ),
                               ),
                             ),
@@ -134,11 +134,11 @@ class WelcomeScreen extends StatelessWidget {
                                 ),
                               ),
                               child: Text(
-                                'ลงชื่อเข้าใช้',
+                                'SIGN UP',
                                 style: GoogleFonts.barlowSemiCondensed(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w800,
-                                  letterSpacing: 1.2,
+                                  letterSpacing: 1.0,
                                 ),
                               ),
                             ),

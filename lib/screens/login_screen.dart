@@ -3,7 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../widgets/backwordbutton-loginpage.dart';
 import '../widgets/SocialLoginButton.dart';
 import 'package:children_app_login/utils/colors.dart';
-import 'start_screen.dart';
+import '../widgets/startbutton.dart';
+import '../screens/start_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -30,7 +31,7 @@ class LoginScreen extends StatelessWidget {
 
                   // Title
                   Text(
-                    'เข้าสู่ระบบ',
+                    'LOG IN',
                     style: GoogleFonts.barlowSemiCondensed(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -151,7 +152,7 @@ class LoginScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const StartButton(),
+                                builder: (context) => const StartScreen(),
                               ),
                             );
                           },
@@ -168,7 +169,7 @@ class LoginScreen extends StatelessWidget {
                               fontSize: 20,
                               fontWeight: FontWeight.w800,
                               color: Colors.white,
-                              letterSpacing: 1.4,
+                              letterSpacing: 1.0,
                             ),
                           ),
                         ),
