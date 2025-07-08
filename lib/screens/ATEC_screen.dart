@@ -193,7 +193,6 @@ class _ATECHomePageState extends State<ATECHomePage> {
                             ),
                           ),
                         ),
-                        _buildNavButton(Icons.chevron_right),
                       ],
                     ),
                   ),
