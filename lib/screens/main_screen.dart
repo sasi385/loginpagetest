@@ -24,7 +24,7 @@ class MAINHomePage extends StatelessWidget {
                   children: [
                     // Top Profile Section
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(24, 56, 24, 24),
+                      padding: const EdgeInsets.fromLTRB(24, 20, 24, 24),
                       child: Row(
                         children: [
                           // Profile Avatar
@@ -116,7 +116,7 @@ class MAINHomePage extends StatelessWidget {
                 // Right Sidebar
                 Positioned(
                   right: 24,
-                  top: 128,
+                  top: 90,
                   child: Container(
                     width: 53,
                     height: 186,
