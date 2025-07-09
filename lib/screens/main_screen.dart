@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import '../screens/start_screen.dart';
 
 class MAINHomePage extends StatelessWidget {
   const MAINHomePage({Key? key}) : super(key: key);
@@ -133,26 +134,63 @@ class MAINHomePage extends StatelessWidget {
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: const [
-                        _SidebarIcon(
-                          icon: Icons.settings,
-                          backgroundColor: Color(0x1A5F4A46),
-                          iconColor: Color(0xFF5F4A46),
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      StartScreen()), // เปลี่ยนหน้าได้ตามต้องการ
+                            );
+                          },
+                          child: const _SidebarIcon(
+                            icon: Icons.settings,
+                            backgroundColor: Color(0x1A5F4A46),
+                            iconColor: Color(0xFF5F4A46),
+                          ),
                         ),
-                        _SidebarIcon(
-                          icon: Icons.mail,
-                          backgroundColor: Color(0x33FED371),
-                          iconColor: Color(0xFFFED371),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartScreen()),
+                            );
+                          },
+                          child: const _SidebarIcon(
+                            icon: Icons.mail,
+                            backgroundColor: Color(0x33FED371),
+                            iconColor: Color(0xFFFED371),
+                          ),
                         ),
-                        _SidebarIcon(
-                          icon: Icons.store,
-                          backgroundColor: Color(0x337F95E4),
-                          iconColor: Color(0xFF7F95E4),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartScreen()),
+                            );
+                          },
+                          child: const _SidebarIcon(
+                            icon: Icons.store,
+                            backgroundColor: Color(0x337F95E4),
+                            iconColor: Color(0xFF7F95E4),
+                          ),
                         ),
-                        _SidebarIcon(
-                          icon: Icons.folder,
-                          backgroundColor: Color(0x33F65A3B),
-                          iconColor: Color(0xFFF65A3B),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartScreen()),
+                            );
+                          },
+                          child: const _SidebarIcon(
+                            icon: Icons.folder,
+                            backgroundColor: Color(0x33F65A3B),
+                            iconColor: Color(0xFFF65A3B),
+                          ),
                         ),
                       ],
                     ),
@@ -181,11 +219,38 @@ class MAINHomePage extends StatelessWidget {
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
-                        _BottomNavItem(
-                            icon: Icons.home, active: true, label: ''),
-                        _BottomNavItem(icon: Icons.games, label: 'GAME'),
-                        _BottomNavItem(icon: Icons.person, label: 'PROFILE'),
+                      children: [
+                        _BottomNavButton(
+                          icon: Icons.home,
+                          label: '',
+                          isActive: true,
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MAINHomePage()));
+                          },
+                        ),
+                        _BottomNavButton(
+                          icon: Icons.games,
+                          label: 'GAME',
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => GamePage()));
+                          },
+                        ),
+                        _BottomNavButton(
+                          icon: Icons.person,
+                          label: 'PROFILE',
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ProfilePage()));
+                          },
+                        ),
                       ],
                     ),
                   ),
@@ -266,6 +331,61 @@ class _BottomNavItem extends StatelessWidget {
           )
         ]
       ],
+    );
+  }
+}
+
+class _BottomNavButton extends StatefulWidget {
+  final IconData icon;
+  final String label;
+  final bool isActive;
+  final VoidCallback onTap;
+
+  const _BottomNavButton({
+    Key? key,
+    required this.icon,
+    required this.label,
+    this.isActive = false,
+    required this.onTap,
+  }) : super(key: key);
+
+  @override
+  State<_BottomNavButton> createState() => _BottomNavButtonState();
+}
+
+class _BottomNavButtonState extends State<_BottomNavButton> {
+  double _scale = 1.0;
+
+  void _onTapDown(_) => setState(() => _scale = 0.9);
+  void _onTapUp(_) => setState(() => _scale = 1.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: _onTapDown,
+      onTapUp: _onTapUp,
+      onTapCancel: () => setState(() => _scale = 1.0),
+      onTap: widget.onTap,
+      child: AnimatedScale(
+        scale: _scale,
+        duration: const Duration(milliseconds: 100),
+        curve: Curves.easeOut,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(widget.icon,
+                color: widget.isActive ? Colors.blue : Colors.grey),
+            if (widget.label.isNotEmpty)
+              Text(
+                widget.label,
+                style: TextStyle(
+                  color: widget.isActive ? Colors.blue : Colors.grey,
+                  fontSize: 12,
+                ),
+              ),
+          ],
+        ),
+      ),
     );
   }
 }
