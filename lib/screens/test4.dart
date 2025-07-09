@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:children_app_login/screens/test3.dart';
+import '/screens/test3.dart';
 
 class Test4Screen extends StatelessWidget {
   const Test4Screen({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class Test4Screen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
-          color: Color(0xFF7F95E4),
+          color: Color.fromRGBO(139, 199, 173, 1),
         ),
         child: Stack(
           children: [
@@ -96,7 +97,7 @@ class Test4Screen extends StatelessWidget {
                 child: ClipOval(
                   child: Container(
                     decoration: const BoxDecoration(
-                      color: Color(0xFF8BC7AD),
+                      color: Color.fromRGBO(139, 199, 173, 1),
                     ),
                     // You can add a profile image here
                     child: const Icon(
@@ -116,7 +117,7 @@ class Test4Screen extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 62,
-                color: const Color(0xFF7F95E4),
+                color: Color.fromRGBO(139, 199, 173, 1),
               ),
             ),
 
@@ -126,6 +127,12 @@ class Test4Screen extends StatelessWidget {
               bottom: 5,
               child: GestureDetector(
                 onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Test3Screen(),
+                    ),
+                  );
                   // Handle left arrow tap
                 },
                 child: Container(
@@ -137,7 +144,7 @@ class Test4Screen extends StatelessWidget {
                   ),
                   child: const Icon(
                     Icons.arrow_back,
-                    color: Color(0xFF7F95E4),
+                    color: Color.fromRGBO(139, 199, 173, 1),
                     size: 20,
                   ),
                 ),
@@ -161,7 +168,7 @@ class Test4Screen extends StatelessWidget {
                   ),
                   child: const Icon(
                     Icons.arrow_forward,
-                    color: Color(0xFF7F95E4),
+                    color: Color.fromRGBO(139, 199, 173, 1),
                     size: 20,
                   ),
                 ),
@@ -185,12 +192,12 @@ class Test4Screen extends StatelessWidget {
             // Active navigation indicator
             Positioned(
               left: 69,
-              bottom: 10,
+              bottom: 10.5,
               child: Container(
                 width: 102,
                 height: 24,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF7F95E4),
+                  color: const Color.fromRGBO(139, 199, 173, 1),
                   borderRadius: BorderRadius.circular(100),
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:children_app_login/screens/test3.dart';
+import '/screens/test1.dart';
 
 class Test2Screen extends StatelessWidget {
   const Test2Screen({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class Test2Screen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
-          color: Color(0xFF7F95E4),
+          color: Color.fromRGBO(246, 90, 59, 1),
         ),
         child: Stack(
           children: [
@@ -116,7 +117,7 @@ class Test2Screen extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 62,
-                color: const Color(0xFF7F95E4),
+                color: Color.fromRGBO(246, 90, 59, 1),
               ),
             ),
 
@@ -126,6 +127,12 @@ class Test2Screen extends StatelessWidget {
               bottom: 5,
               child: GestureDetector(
                 onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Test1Screen(),
+                    ),
+                  );
                   // Handle left arrow tap
                 },
                 child: Container(
@@ -137,7 +144,7 @@ class Test2Screen extends StatelessWidget {
                   ),
                   child: const Icon(
                     Icons.arrow_back,
-                    color: Color(0xFF7F95E4),
+                    color: Color.fromRGBO(246, 90, 59, 1),
                     size: 20,
                   ),
                 ),
@@ -167,7 +174,7 @@ class Test2Screen extends StatelessWidget {
                   ),
                   child: const Icon(
                     Icons.arrow_forward,
-                    color: Color(0xFF7F95E4),
+                    color: Color.fromRGBO(246, 90, 59, 1),
                     size: 20,
                   ),
                 ),
@@ -191,12 +198,12 @@ class Test2Screen extends StatelessWidget {
             // Active navigation indicator
             Positioned(
               left: 69,
-              bottom: 10,
+              bottom: 10.5,
               child: Container(
                 width: 102,
                 height: 24,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF7F95E4),
+                  color: Color.fromRGBO(246, 90, 59, 1),
                   borderRadius: BorderRadius.circular(100),
                 ),
               ),

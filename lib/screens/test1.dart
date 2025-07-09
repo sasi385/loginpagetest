@@ -96,7 +96,7 @@ class Test1Screen extends StatelessWidget {
                 child: ClipOval(
                   child: Container(
                     decoration: const BoxDecoration(
-                      color: Color(0xFF8BC7AD),
+                      color: Color(0xFF8BC7AD), //พื้นหลังรูปโปรไฟล์
                     ),
                     // You can add a profile image here
                     child: const Icon(
@@ -191,7 +191,7 @@ class Test1Screen extends StatelessWidget {
             // Active navigation indicator
             Positioned(
               left: 69,
-              bottom: 10,
+              bottom: 10.5,
               child: Container(
                 width: 102,
                 height: 24,
