@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:children_app_login/screens/test3.dart';
 import '/screens/test3.dart';
+import '../screens/start_screen.dart';
 
 class Test4Screen extends StatelessWidget {
   const Test4Screen({Key? key}) : super(key: key);
@@ -43,15 +44,15 @@ class Test4Screen extends StatelessWidget {
             // Title "Parent"
             const Positioned(
               left: 43,
-              top: 55,
+              top: 35,
               child: Text(
-                'Parent',
+                '4.ด้านสุขภาพร่างกาย\nและพฤติกรรม',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Barlow Semi Condensed',
-                  fontSize: 40,
+                  fontSize: 33,
                   fontWeight: FontWeight.w700,
-                  letterSpacing: 2,
+                  letterSpacing: 0.5,
                 ),
               ),
             ),
@@ -59,11 +60,11 @@ class Test4Screen extends StatelessWidget {
             // Subtitle
             const Positioned(
               left: 43,
-              top: 109,
+              top: 127,
               child: SizedBox(
                 width: 235,
                 child: Text(
-                  'Hello! A safe and fun space for every child\'s development.',
+                  'จำนวน 25 ข้อ',
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Barlow Semi Condensed',
@@ -157,6 +158,12 @@ class Test4Screen extends StatelessWidget {
               bottom: 5,
               child: GestureDetector(
                 onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const StartScreen(),
+                    ),
+                  );
                   // Handle right arrow tap
                 },
                 child: Container(
@@ -180,7 +187,7 @@ class Test4Screen extends StatelessWidget {
               left: 65,
               bottom: 8,
               child: Container(
-                width: 370,
+                width: 360,
                 height: 30,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -191,10 +198,10 @@ class Test4Screen extends StatelessWidget {
 
             // Active navigation indicator
             Positioned(
-              left: 69,
+              left: 360,
               bottom: 10.5,
               child: Container(
-                width: 102,
+                width: 60,
                 height: 24,
                 decoration: BoxDecoration(
                   color: const Color.fromRGBO(139, 199, 173, 1),

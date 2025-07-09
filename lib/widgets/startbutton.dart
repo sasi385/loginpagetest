@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:children_app_login/screens/main_screen.dart'; // อย่าลืม import หน้าที่จะไป
 
 class StartButton extends StatefulWidget {
-  final VoidCallback? onPressed;
-
-  const StartButton({Key? key, this.onPressed}) : super(key: key);
+  const StartButton({Key? key}) : super(key: key);
 
   @override
   State<StartButton> createState() => _StartButtonState();
@@ -11,6 +10,13 @@ class StartButton extends StatefulWidget {
 
 class _StartButtonState extends State<StartButton> {
   bool _isPressed = false;
+
+  void _goToNextPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const MAINHomePage()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +41,16 @@ class _StartButtonState extends State<StartButton> {
         onTapDown: (_) => setState(() => _isPressed = true),
         onTapUp: (_) => setState(() => _isPressed = false),
         onTapCancel: () => setState(() => _isPressed = false),
-        onTap: widget.onPressed,
+        onTap: _goToNextPage, // เรียกฟังก์ชันนำทาง
         child: AnimatedScale(
           scale: _isPressed ? 0.95 : 1.0,
           duration: const Duration(milliseconds: 100),
           child: SizedBox(
             width: double.infinity,
-            child: Text(
+            child: const Text(
               'START',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: 'Barlow Semi Condensed',
                 fontSize: 48,
                 fontWeight: FontWeight.w800,

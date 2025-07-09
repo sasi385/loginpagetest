@@ -43,15 +43,15 @@ class Test2Screen extends StatelessWidget {
             // Title "Parent"
             const Positioned(
               left: 43,
-              top: 55,
+              top: 35,
               child: Text(
-                'Parent',
+                '2.ด้านความสามารถ\nทางสังคม',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Barlow Semi Condensed',
-                  fontSize: 40,
+                  fontSize: 33,
                   fontWeight: FontWeight.w700,
-                  letterSpacing: 2,
+                  letterSpacing: 0.5,
                 ),
               ),
             ),
@@ -59,11 +59,11 @@ class Test2Screen extends StatelessWidget {
             // Subtitle
             const Positioned(
               left: 43,
-              top: 109,
+              top: 127,
               child: SizedBox(
                 width: 235,
                 child: Text(
-                  'Hello! A safe and fun space for every child\'s development.',
+                  'จำนวน 20 ข้อ',
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Barlow Semi Condensed',
@@ -186,7 +186,7 @@ class Test2Screen extends StatelessWidget {
               left: 65,
               bottom: 8,
               child: Container(
-                width: 370,
+                width: 360,
                 height: 30,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -197,10 +197,10 @@ class Test2Screen extends StatelessWidget {
 
             // Active navigation indicator
             Positioned(
-              left: 69,
+              left: 160,
               bottom: 10.5,
               child: Container(
-                width: 102,
+                width: 90,
                 height: 24,
                 decoration: BoxDecoration(
                   color: Color.fromRGBO(246, 90, 59, 1),

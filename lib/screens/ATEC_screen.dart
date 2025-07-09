@@ -130,17 +130,17 @@ class _ATECHomePageState extends State<ATECHomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        _buildFormField('Name of Child', _childNameController,
+                        _buildFormField('ชื่อของเด็ก', _childNameController,
                             'Enter child\'s name'),
                         const SizedBox(height: 32),
                         const Text(
-                          'Date of Birth',
+                          'วันกิด',
                           style: TextStyle(
                               fontSize: 24, fontWeight: FontWeight.w700),
                         ),
                         const SizedBox(height: 8),
                         const Text(
-                          '(format: MM/DD/YYYY, Example: 09/25/1998)',
+                          '(รูปแบบ: MM/DD/YYYY, Example: 09/25/1998)',
                           style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
@@ -150,16 +150,16 @@ class _ATECHomePageState extends State<ATECHomePage> {
                         _buildTextField(_dateOfBirthController, 'MM/DD/YYYY'),
                         const SizedBox(height: 32),
                         const Text(
-                          'Sex',
+                          'เพศ',
                           style: TextStyle(
                               fontSize: 24, fontWeight: FontWeight.w700),
                         ),
                         const SizedBox(height: 24),
                         Row(
                           children: [
-                            _buildRadioOption('female', 'Female'),
+                            _buildRadioOption('female', 'หญิง'),
                             const SizedBox(width: 48),
-                            _buildRadioOption('male', 'Male'),
+                            _buildRadioOption('male', 'ชาย'),
                           ],
                         ),
                       ],
