@@ -10,9 +10,12 @@ class StartScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // พื้นหลัง (สีหรือรูปภาพ)
+          // 🔹 ภาพพื้นหลังเต็มจอ
           Positioned.fill(
-            child: Container(color: Colors.white),
+            child: Image.asset(
+              'assets/images/WELCOME1.png',
+              fit: BoxFit.cover,
+            ),
           ),
 
           // 🔹 ปุ่ม Back ด้านบนซ้าย
@@ -23,7 +26,13 @@ class StartScreen extends StatelessWidget {
           ),
 
           // 🔹 ปุ่ม START ล่างสุดของจอ
-          const StartButton(),
+          const Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 0.0),
+              child: StartButton(),
+            ),
+          ),
         ],
       ),
     );

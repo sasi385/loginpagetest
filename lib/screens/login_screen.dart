@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../widgets/backwordbutton-loginpage.dart';
 import '../widgets/SocialLoginButton.dart';
 import 'package:children_app_login/utils/colors.dart';
-import '../widgets/startbutton.dart';
 import '../screens/start_screen.dart';
 
 class LoginScreen extends StatelessWidget {

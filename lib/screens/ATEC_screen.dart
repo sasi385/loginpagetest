@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+// แก้ไขพาธให้ตรงกับโปรเจกต์คุณ
+import '/widgets/backwordbutton-loginpage.dart';
+import 'package:children_app_login/screens/test1.dart';
 
 void main() {
   runApp(const ATECApp());
@@ -170,7 +173,9 @@ class _ATECHomePageState extends State<ATECHomePage> {
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Row(
                       children: [
-                        _buildNavButton(Icons.chevron_left),
+                        // ใช้ BackButtonWidget แทนปุ่ม NavButton ซ้าย
+                        BackButtonWidget(),
+
                         Expanded(
                           child: Container(
                             margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -193,6 +198,9 @@ class _ATECHomePageState extends State<ATECHomePage> {
                             ),
                           ),
                         ),
+
+                        // เพิ่ม NavButton ทางขวา อีกอัน
+                        _buildNavButton(Icons.chevron_right),
                       ],
                     ),
                   ),
@@ -277,7 +285,17 @@ class _ATECHomePageState extends State<ATECHomePage> {
         color: Colors.white,
         shape: BoxShape.circle,
       ),
-      child: Icon(icon, color: atecBrown, size: 24),
+      child: IconButton(
+        icon: Icon(icon, color: atecBrown, size: 24),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Test1Screen(),
+            ),
+          );
+        },
+      ),
     );
   }
 
