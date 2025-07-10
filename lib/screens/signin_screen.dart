@@ -168,32 +168,37 @@ class SignInScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 32),
                       // Login Button
-                      SizedBox(
-                        width: double.infinity,
-                        height: 45,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const ATECHomePage(),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 24, vertical: 90), // <-- ปรับตรงนี้
+                        child: SizedBox(
+                          width: double.infinity,
+                          height: 45,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const ATECHomePage(),
+                                ),
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppColors.brownPrimary,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100),
                               ),
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.brownPrimary,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100),
+                              elevation: 0,
                             ),
-                            elevation: 0,
-                          ),
-                          child: Text(
-                            'SIGN IN',
-                            style: GoogleFonts.barlowSemiCondensed(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.white,
-                              letterSpacing: 1.0,
+                            child: Text(
+                              'เข้าสู่ระบบ',
+                              style: GoogleFonts.barlowSemiCondensed(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.white,
+                                letterSpacing: 1.0,
+                              ),
                             ),
                           ),
                         ),
@@ -201,56 +206,10 @@ class SignInScreen extends StatelessWidget {
                       const SizedBox(height: 32),
 
                       // Divider
-                      Row(
-                        children: [
-                          const Expanded(
-                            child: Divider(
-                              color: AppColors.brownTertiary,
-                              thickness: 1,
-                              endIndent: 16,
-                            ),
-                          ),
-                          Text(
-                            'หรือ',
-                            style: GoogleFonts.barlowSemiCondensed(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.brownTertiary,
-                              letterSpacing: 0.8,
-                            ),
-                          ),
-                          const Expanded(
-                            child: Divider(
-                              color: AppColors.brownTertiary,
-                              thickness: 1,
-                              indent: 16,
-                            ),
-                          ),
-                        ],
-                      ),
+
                       const SizedBox(height: 24),
 
                       // Social Login
-                      SocialLoginButton(
-                        text: 'Continue with Google',
-                        backgroundColor: AppColors.yellowSecondary,
-                        iconWidget: Container(
-                          width: 38,
-                          height: 20,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Icon(
-                            Icons.g_mobiledata,
-                            color: AppColors.yellowSecondary,
-                            size: 24,
-                          ),
-                        ),
-                        onPressed: () {
-                          // TODO: Google Login
-                        },
-                      ),
                     ],
                   ),
                 ),
