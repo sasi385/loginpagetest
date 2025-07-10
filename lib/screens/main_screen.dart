@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../screens/gamemap_screen.dart';
 import '../screens/start_screen.dart';
 
 class MAINHomePage extends StatelessWidget {
@@ -10,25 +10,21 @@ class MAINHomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
           Positioned.fill(
             child: Image.asset(
-              'assets/images/HOME.png', // <-- Replace with your actual image path
+              'assets/images/HOME.png',
               fit: BoxFit.cover,
             ),
           ),
-          // Main Content with SafeArea
           SafeArea(
             child: Stack(
               children: [
                 Column(
                   children: [
-                    // Top Profile Section
                     Padding(
                       padding: const EdgeInsets.fromLTRB(24, 20, 24, 24),
                       child: Row(
                         children: [
-                          // Profile Avatar
                           Container(
                             width: 56,
                             height: 56,
@@ -113,8 +109,6 @@ class MAINHomePage extends StatelessWidget {
                     const Spacer(),
                   ],
                 ),
-
-                // Right Sidebar
                 Positioned(
                   right: 24,
                   top: 90,
@@ -135,69 +129,50 @@ class MAINHomePage extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      StartScreen()), // เปลี่ยนหน้าได้ตามต้องการ
-                            );
-                          },
-                          child: const _SidebarIcon(
-                            icon: Icons.settings,
-                            backgroundColor: Color(0x1A5F4A46),
-                            iconColor: Color(0xFF5F4A46),
+                        _SidebarButton(
+                          icon: Icons.settings,
+                          backgroundColor: const Color(0x1A5F4A46),
+                          iconColor: const Color(0xFF5F4A46),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StartScreen()),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => StartScreen()),
-                            );
-                          },
-                          child: const _SidebarIcon(
-                            icon: Icons.mail,
-                            backgroundColor: Color(0x33FED371),
-                            iconColor: Color(0xFFFED371),
+                        _SidebarButton(
+                          icon: Icons.mail,
+                          backgroundColor: const Color(0x33FED371),
+                          iconColor: const Color(0xFFFED371),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StartScreen()),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => StartScreen()),
-                            );
-                          },
-                          child: const _SidebarIcon(
-                            icon: Icons.store,
-                            backgroundColor: Color(0x337F95E4),
-                            iconColor: Color(0xFF7F95E4),
+                        _SidebarButton(
+                          icon: Icons.store,
+                          backgroundColor: const Color(0x337F95E4),
+                          iconColor: const Color(0xFF7F95E4),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StartScreen()),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => StartScreen()),
-                            );
-                          },
-                          child: const _SidebarIcon(
-                            icon: Icons.folder,
-                            backgroundColor: Color(0x33F65A3B),
-                            iconColor: Color(0xFFF65A3B),
+                        _SidebarButton(
+                          icon: Icons.folder,
+                          backgroundColor: const Color(0x33F65A3B),
+                          iconColor: const Color(0xFFF65A3B),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StartScreen()),
                           ),
                         ),
                       ],
                     ),
                   ),
                 ),
-
-                // Bottom Navigation
                 Positioned(
                   bottom: 0,
                   left: 0,
@@ -206,9 +181,8 @@ class MAINHomePage extends StatelessWidget {
                     height: 80,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: const BorderRadius.vertical(
-                        top: Radius.circular(24),
-                      ),
+                      borderRadius:
+                          const BorderRadius.vertical(top: Radius.circular(24)),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.25),
@@ -222,34 +196,31 @@ class MAINHomePage extends StatelessWidget {
                       children: [
                         _BottomNavButton(
                           icon: Icons.home,
-                          label: '',
+                          label: 'HOME',
                           isActive: true,
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => MAINHomePage()));
-                          },
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MAINHomePage()),
+                          ),
                         ),
                         _BottomNavButton(
                           icon: Icons.games,
                           label: 'GAME',
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => GamePage()));
-                          },
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => GameMapScreen()),
+                          ),
                         ),
                         _BottomNavButton(
                           icon: Icons.person,
                           label: 'PROFILE',
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ProfilePage()));
-                          },
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StartScreen()),
+                          ),
                         ),
                       ],
                     ),
@@ -264,73 +235,32 @@ class MAINHomePage extends StatelessWidget {
   }
 }
 
-class _SidebarIcon extends StatelessWidget {
+class _SidebarButton extends StatelessWidget {
   final IconData icon;
   final Color backgroundColor;
   final Color iconColor;
+  final VoidCallback onTap;
 
-  const _SidebarIcon({
+  const _SidebarButton({
     required this.icon,
     required this.backgroundColor,
     required this.iconColor,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 36,
-      height: 36,
-      decoration: BoxDecoration(
-        color: backgroundColor,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Icon(icon, color: iconColor, size: 20),
-    );
-  }
-}
-
-class _BottomNavItem extends StatelessWidget {
-  final IconData icon;
-  final bool active;
-  final String label;
-
-  const _BottomNavItem({
-    required this.icon,
-    this.active = false,
-    required this.label,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          width: 48,
-          height: 48,
-          decoration: BoxDecoration(
-            color: active ? const Color(0xFF7F95E4) : Colors.transparent,
-            shape: BoxShape.circle,
-          ),
-          child: Icon(
-            icon,
-            color: active ? Colors.white : const Color(0xFFD9D9D9),
-            size: 24,
-          ),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 36,
+        height: 36,
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(10),
         ),
-        if (label.isNotEmpty) ...[
-          const SizedBox(height: 4),
-          Text(
-            label,
-            style: const TextStyle(
-              color: Color(0xFFD9D9D9),
-              fontSize: 10,
-              fontWeight: FontWeight.w500,
-              fontFamily: 'Khula',
-            ),
-          )
-        ]
-      ],
+        child: Icon(icon, color: iconColor, size: 20),
+      ),
     );
   }
 }
@@ -373,16 +303,20 @@ class _BottomNavButtonState extends State<_BottomNavButton> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(widget.icon,
-                color: widget.isActive ? Colors.blue : Colors.grey),
-            if (widget.label.isNotEmpty)
-              Text(
-                widget.label,
-                style: TextStyle(
-                  color: widget.isActive ? Colors.blue : Colors.grey,
-                  fontSize: 12,
-                ),
+            Icon(
+              widget.icon,
+              color: widget.isActive ? Colors.blue : Colors.grey,
+              size: 30,
+            ),
+            const SizedBox(height: 4),
+            Text(
+              widget.label,
+              style: TextStyle(
+                color: widget.isActive ? Colors.blue : Colors.grey,
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
               ),
+            ),
           ],
         ),
       ),
